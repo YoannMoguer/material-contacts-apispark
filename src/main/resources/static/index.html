@@ -112,6 +112,17 @@
         </md-input-container>
 
         <md-input-container>
+          <label>Gender</label>
+          <input name="gender"
+                 ng-model="cc.copyContact.gender"
+                 required>
+
+          <div ng-messages="contactForm.gender.$error" ng-show="contactForm.gender.$dirty">
+              <div ng-message="required">This is required!</div>
+          </div>
+        </md-input-container>
+
+        <md-input-container>
           <label>Avatar</label>
           <!--no ng-disabled on md-select for now, see: https://github.com/angular/material/pull/1871-->
           <md-select ng-model="cc.copyContact.avatar"
